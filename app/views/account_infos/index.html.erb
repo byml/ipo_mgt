@@ -1,0 +1,19 @@
+<h1>证券账户列表</h1>
+ 
+<table class="table table-striped">
+  <tr>
+    <th widht="20%">账户代码</th>
+    <th widht="20%">持有人</th>
+    <th widht="20%">开户券商</th>
+    <th widht="20%"></th>
+  </tr>
+ 
+  <% @account_infos.each do |account_info| %>
+    <tr>
+      <td><%= account_info.code %></td>
+      <td><%= account_info.stakeholder.code %></td>
+      <td><%= account_info.broker.name %></td>
+      <td><%= link_to '查看', account_info_path(account_info) %></td>
+    </tr>
+  <% end %>
+</table>

@@ -1,0 +1,13 @@
+<div class="row">
+<p>
+  <strong>持有人：</strong>
+  <%= @account_info.stakeholder.code %>
+</p>
+ 
+<p>
+  <strong>开户券商:</strong>
+  <%= @account_info.broker.name %>
+</p>
+ 
+<%= link_to '返回', account_infos_path %>
+</div>
